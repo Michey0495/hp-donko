@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kuro: #0A0A0A;
+  --color-sumi: #151210;
+  --color-beni: #9B2335;
+  --color-beni-bright: #C41E3A;
+  --color-kin: #C9A84C;
+  --color-kin-dim: #A68B3C;
+  --color-shiro: #F2EDE4;
+  --color-hai: #8A8278;
+  --font-mincho: "Shippori Mincho B1", serif;
+  --font-gothic: "Zen Kaku Gothic New", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-gothic);
+  background-color: var(--color-kuro);
+  color: var(--color-shiro);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mincho);
+}
+
+::selection {
+  background-color: var(--color-beni);
+  color: var(--color-shiro);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-kuro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-beni);
+  border-radius: 3px;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Decorative divider */
+.tosa-divider {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, var(--color-kin), transparent);
+  margin: 0 auto;
+}
+
+/* Gold accent line */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-kin), transparent);
+}
+
+/* Beni accent line */
+.beni-line {
+  height: 2px;
+  width: 40px;
+  background: var(--color-beni);
+  margin: 0 auto;
+}
+
+@keyframes hero-text-emerge {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes wave-drift {
+  0%, 100% { transform: translateX(0) scaleY(1); }
+  50% { transform: translateX(-8px) scaleY(1.02); }
+}
+
+.animate-hero-title {
+  animation: hero-text-emerge 1.2s ease-out 0.3s both;
+}
+
+.animate-hero-subtitle {
+  animation: hero-text-emerge 1.0s ease-out 0.8s both;
+}
+
+.animate-hero-tagline {
+  animation: hero-text-emerge 1.0s ease-out 1.2s both;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave-drift 6s ease-in-out infinite;
+}

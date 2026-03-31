@@ -83,7 +83,7 @@ export default function ContactPage() {
         <RevealSection>
           <div className="relative aspect-[16/9] w-full overflow-hidden border border-white/10">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.4!2d133.5395!3d33.5585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z44Gp44KT44GT!5e0!3m2!1sja!2sjp!4v1"
+              src="https://www.google.com/maps?q=%E9%AB%98%E7%9F%A5%E7%9C%8C%E9%AB%98%E7%9F%A5%E5%B8%82%E3%81%AF%E3%82%8A%E3%81%BE%E3%82%84%E7%94%BA2-1-21+%E3%81%A9%E3%82%93%E3%81%93&output=embed&hl=ja"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(0.3) contrast(1.1)" }}
